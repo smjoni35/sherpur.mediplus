@@ -1,0 +1,74 @@
+<%- include('partials/header') %>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>ব্যাচ ও ফি কাঠামো</h2>
+      <p>নিচের যেকোনো ব্যাচে ভর্তি হতে পারো। বিস্তারিত জানতে কল করো বা ফরম পূরণ করো।</p>
+    </div>
+
+    <div class="batch-row">
+      <div class="batch-name">HSC একাডেমিক ব্যাচ<small>একাদশ-দ্বাদশ, ২ বছর মেয়াদী</small></div>
+      <div class="batch-desc">HSC সিলেবাসের পাশাপাশি মেডিকেল ভর্তি পরীক্ষার ভিত্তি তৈরি — সপ্তাহে ৬ দিন ক্লাস, সাপ্তাহিক পরীক্ষা।</div>
+      <div class="batch-fee">৳ ৫,০০০<span>মাসিক</span></div>
+    </div>
+    <div class="batch-row">
+      <div class="batch-name">HSC উত্তীর্ণ ইন্টেনসিভ<small>৬ মাস মেয়াদী</small></div>
+      <div class="batch-desc">HSC পরীক্ষার পর থেকে ভর্তি পরীক্ষা পর্যন্ত সার্বক্ষণিক প্রস্তুতি — নিয়মিত মডেল টেস্ট ও র‍্যাংকিং সহ।</div>
+      <div class="batch-fee">৳ ২৫,০০০<span>পূর্ণ কোর্স</span></div>
+    </div>
+    <div class="batch-row">
+      <div class="batch-name">শেষ মুহূর্তের সাজেশন<small>১ মাস মেয়াদী</small></div>
+      <div class="batch-desc">পরীক্ষার আগে দ্রুত রিভিশন, শর্ট সাজেশন ও একাধিক ফাইনাল মডেল টেস্ট।</div>
+      <div class="batch-fee">৳ ৩,৫০০<span>পূর্ণ কোর্স</span></div>
+    </div>
+    <div class="batch-row">
+      <div class="batch-name">শুধু মডেল টেস্ট<small>সাপ্তাহিক</small></div>
+      <div class="batch-desc">শুধুমাত্র নিয়মিত মডেল টেস্ট দিয়ে নিজের প্রস্তুতি যাচাই করতে চাইলে।</div>
+      <div class="batch-fee">৳ ৫০০<span>প্রতি টেস্ট</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="admission">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="section-head">
+        <h2>ভর্তি ফরম</h2>
+        <p>নিচের তথ্যগুলো পূরণ করো, আমাদের টিম শীঘ্রই যোগাযোগ করবে।</p>
+      </div>
+    </div>
+    <div>
+      <form class="admission-form" method="POST" action="/admission">
+        <div>
+          <label for="name">পূর্ণ নাম</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="phone">মোবাইল নাম্বার</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="batch">ব্যাচ নির্বাচন করো</label>
+          <select id="batch" name="batch" required>
+            <option value="">— নির্বাচন করো —</option>
+            <option value="hsc-academic">HSC একাডেমিক ব্যাচ</option>
+            <option value="hsc-intensive">HSC উত্তীর্ণ ইন্টেনসিভ</option>
+            <option value="suggestion">শেষ মুহূর্তের সাজেশন</option>
+            <option value="model-test">শুধু মডেল টেস্ট</option>
+          </select>
+        </div>
+        <div>
+          <label for="group">গ্রুপ</label>
+          <select id="group" name="group" required>
+            <option value="">— নির্বাচন করো —</option>
+            <option value="science">বিজ্ঞান</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">ফরম জমা দাও</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

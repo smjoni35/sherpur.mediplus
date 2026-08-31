@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<section>
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <div class="section-head">
+        <h2>যোগাযোগ করো</h2>
+        <p>প্রশ্ন থাকলে সরাসরি কল করো অথবা সেন্টারে চলে এসো।</p>
+      </div>
+      <dl>
+        <dt>ঠিকানা</dt><dd><%= site.address %></dd>
+        <dt>ফোন</dt><dd><%= site.phone %></dd>
+        <dt>হোয়াটসঅ্যাপ</dt><dd><%= site.whatsapp %></dd>
+        <dt>ইমেইল</dt><dd><%= site.email %></dd>
+        <dt>সময়</dt><dd>প্রতিদিন সকাল ৯টা - রাত ৯টা</dd>
+      </dl>
+      <a href="https://wa.me/<%= site.whatsapp %>" class="btn btn-primary" style="color:#fff;">হোয়াটসঅ্যাপে মেসেজ করো</a>
+    </div>
+
+    <div class="map-frame">
+      <iframe
+        src="https://www.google.com/maps?q=Dhanmondi,Dhaka&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="সেন্টারের অবস্থান">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
